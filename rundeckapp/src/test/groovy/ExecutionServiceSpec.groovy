@@ -1521,8 +1521,7 @@ class ExecutionServiceSpec extends Specification implements ServiceUnitTest<Exec
         where:
         opts                                           | remoteValues
         ['test1': 'somevalue']                         | ["A", "B", "C"]
-        ['test1': 'somevalue']                         | [[name: "a", value:"A"], [name:"b", value:"B"], [name:"c", value:"C"]]
-        ['test1': 'somevalue']                         | [foo: 'bar']
+        ['test1': 'somevalue']                         | [new JSONObject(name: "a", value:"A"), new JSONObject(name:"b", value:"B"), new JSONObject(name:"c", value:"C")]
 
     }
 
